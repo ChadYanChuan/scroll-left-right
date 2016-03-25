@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Cache" content="no-cache">
+	<title>面试官报表</title>
+	<link href="css/common.css" rel="stylesheet" />
+
+	<script type="text/javascript">
+		var innerH = window.innerHeight;
+		
+	</script>
+	
+    	
+	</head>
+
+	<body>
+		<header>
+			<div class="header">菜单:左右滚动封装</div>
+		</header>
+		<div class="main container godown">
+			
+			<div class="th">
+				<div id="th-scroll-wraper" class="th-scroll-wraper">
+
+				</div>
+			</div>
+			<div class="data-scroll-con" id='scroll1' style="height: 400px;">
+				<div class="up-down-scroller" id='scroll2' style="">
+
+				</div>
+			</div>
+		</div>
+		
+		<script id='thTemp' type="text/html">
+			<div class="zb-th">
+				<%for(var i=1;i<headArr.length;i++){%>
+					<span><p class="s-name"><%=headArr[i]%></p></span>
+				<%}%>
+			</div>
+			<div class="p-left p-pad th-org">
+				<div class="rank">
+					<%=headArr[0]%>
+				</div>
+				
+			</div>
+		</script>
+		<script id='qinwen' type="text/html">
+			<div id='data-list' class="data-list" style="width: <%=senceL*75%>px">
+				<%for(var i=0;i<body.length;i++){%>
+					<%if(i%2==0){%>
+					<div class="zb-list even">
+						<%for(var j=0;j<body[i].Scene.length;j++){%>
+							<span class=""><%=body[i].Scene[j]%></span>
+						<%}%>
+					</div>
+					<%}else{%>
+						<div class="zb-list old">
+						<%for(var j=0;j<body[i].Scene.length;j++){%>
+							<span class=""><%=body[i].Scene[j]%></span>
+						<%}%>
+					</div>
+						<%}%>
+					<%}%>
+				
+			</div>
+			<div class="p-left p-pad">
+				<%for(var i=0;i<body.length;i++){%>
+					<div class="org">
+						<p><span class="idx idxz">1</span><span class="name">标题XXXXX</span></p>
+					</div>
+				<%}%>
+				
+			</div>
+			
+		</script>
+
+	<script src="scrolljs/template-native.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scrolljs/jquery-1.8.0.min.js" type="text/javascript"></script>
+	<!-- build:js js/built.js -->
+	<script src="scrolljs/iscroll.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="scrolljs/effect.js" type="text/javascript" charset="utf-8"></script>
+	<!-- endbuild -->
+
+	<script type="text/javascript" src="scrolljs/tempCtr.js"></script>
+	</body>
+</html>
