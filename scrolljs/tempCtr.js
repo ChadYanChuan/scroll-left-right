@@ -1,3 +1,4 @@
+//yanchuan
 window.BI = window.BI || {};
 (function(BI) {
 	BI.tempCtr = BI.tempCtr || {}
